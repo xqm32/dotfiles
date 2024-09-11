@@ -1,0 +1,16 @@
+import = ["~/.config/alacritty/active.toml"]
+
+[env]
+ALACRITTY = "true"
+
+[cursor]
+style.shape = "Beam"
+
+[keyboard]
+bindings = [
+    { key = "Left", mods = "Alt", chars = "\u001bB" },
+    { key = "Right", mods = "Alt", chars = "\u001bF" },
+    { key = "Left", mods = "Command", chars = "\u001bOH" },
+    { key = "Right", mods = "Command", chars = "\u001bOF" },
+    { key = "Back", mods = "Command", chars = "\u0015" },
+]
