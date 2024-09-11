@@ -1,0 +1,16 @@
+{
+    "C_Cpp.clang_format_style": "LLVM",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "go.formatTool": "gofumpt",
+    "go.lintTool": "golangci-lint",
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "rust-analyzer.check.command": "clippy",
+    "terminal.integrated.cursorStyle": "line",
+    "window.autoDetectColorScheme": true,
+    "window.customTitleBarVisibility": "windowed",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.preferredLightColorTheme": "GitHub Light"
+}
