@@ -6,6 +6,8 @@
     "gopls": {
         "ui.semanticTokens": true
     },
+    "python.analysis.autoImportCompletions": true,
+    "python.terminal.activateEnvironment": false,
     "rust-analyzer.check.command": "clippy",
     "terminal.integrated.cursorStyle": "line",
     "window.autoDetectColorScheme": true,
