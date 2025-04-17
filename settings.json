@@ -1,7 +1,18 @@
 {
     "C_Cpp.clang_format_style": "LLVM",
     "C_Cpp.codeAnalysis.clangTidy.enabled": true,
-    "go.formatTool": "gofumpt",
+    "go.alternateTools": {
+        "customFormatter": "golangci-lint"
+    },
+    "go.formatFlags": [
+        "fmt",
+        "--stdin"
+    ],
+    "go.formatTool": "custom",
+    "go.lintFlags": [
+        "--path-mode=abs",
+        "--fast-only"
+    ],
     "go.lintTool": "golangci-lint",
     "gopls": {
         "ui.semanticTokens": true
