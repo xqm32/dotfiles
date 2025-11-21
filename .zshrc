@@ -9,7 +9,7 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(starship init zsh)"
-eval "$(atuin init zsh --disable-up-arrow)"
+source <(fzf --zsh)
 
 alias ll="eza -l"
 alias tree="eza -T"
