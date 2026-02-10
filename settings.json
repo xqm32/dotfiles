@@ -21,7 +21,6 @@
         "ui.semanticTokens": true
     },
     "python.analysis.autoImportCompletions": true,
-    "python.analysis.typeCheckingMode": "strict",
     "python.terminal.activateEnvironment": false,
     "rust-analyzer.check.command": "clippy",
     "terminal.integrated.cursorStyle": "line",
