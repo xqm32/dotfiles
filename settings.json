@@ -25,7 +25,6 @@
     "python.terminal.activateEnvironment": false,
     "rust-analyzer.check.command": "clippy",
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.suggest.enabled": true,
     "window.autoDetectColorScheme": true,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.preferredDarkColorTheme": "GitHub Dark",
