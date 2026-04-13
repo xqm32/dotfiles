@@ -20,9 +20,9 @@
     "gopls": {
         "ui.semanticTokens": true
     },
+    "python-envs.terminal.autoActivationType": "off",
     "python.analysis.autoImportCompletions": true,
     "python.analysis.typeCheckingMode": "standard",
-    "python.terminal.activateEnvironment": false,
     "rust-analyzer.check.command": "clippy",
     "scm.repositories.selectionMode": "single",
     "terminal.integrated.cursorStyle": "line",
