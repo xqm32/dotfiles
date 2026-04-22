@@ -4,6 +4,7 @@
     },
     "C_Cpp.clang_format_style": "LLVM",
     "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "chat.viewSessions.enabled": false,
     "go.alternateTools": {
         "customFormatter": "golangci-lint-v2"
     },
