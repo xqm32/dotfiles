@@ -7,7 +7,7 @@
     "chat.disableAIFeatures": true,
     "chat.viewSessions.enabled": false,
     "go.alternateTools": {
-        "customFormatter": "golangci-lint-v2"
+        "customFormatter": "golangci-lint"
     },
     "go.formatFlags": [
         "fmt",
@@ -18,7 +18,7 @@
         "--path-mode=abs",
         "--fast-only"
     ],
-    "go.lintTool": "golangci-lint-v2",
+    "go.lintTool": "golangci-lint",
     "gopls": {
         "ui.semanticTokens": true
     },
