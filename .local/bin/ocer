@@ -1,0 +1,49 @@
+#!/usr/bin/env -S uv run --script
+
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "rich>=15.0.0",
+# ]
+# ///
+
+from json import load
+from subprocess import run
+from sys import argv
+from tempfile import TemporaryFile
+
+from rich import print
+from rich.markup import escape
+from rich.tree import Tree
+
+
+def main() -> None:
+    with TemporaryFile(mode="w+b") as file:
+        run(["opencode", "export", argv[1]], stdout=file)
+        file.seek(0)
+        session = load(file)
+
+    tree = Tree(session["info"]["title"])
+
+    messages = session["messages"]
+    for message in messages:
+        role = message["info"]["role"]
+        if role != "user":
+            continue
+
+        agent = message["info"]["agent"]
+        style = "#f5a742" if agent == "plan" else "#5c9cf5"
+
+        parts = message["parts"]
+        for part in parts:
+            part_type = part["type"]
+            if part_type != "text":
+                tree.add(escape(f"[{part_type}]"), style=style)
+            else:
+                tree.add(f"{part['text']}", style=style)
+
+    print(tree)
+
+
+if __name__ == "__main__":
+    main()
