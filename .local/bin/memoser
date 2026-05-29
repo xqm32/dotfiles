@@ -1,0 +1,45 @@
+#!/usr/bin/env -S uv run --script
+
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "httpx>=0.28.1",
+# ]
+# ///
+
+from os import environ
+from typing import Literal
+
+from httpx import Client
+
+
+def main() -> None:
+    client = Client(
+        base_url=environ["MEMOS_URL"],
+        headers={"Authorization": f"Bearer {environ['MEMOS_TOKEN']}"},
+    )
+
+    def list_memos(state: Literal["NORMAL", "ARCHIVED"]):
+        memos = []
+        while True:
+            response = client.get(
+                "/api/v1/memos",
+                params={
+                    "pageSize": 1000,
+                    "state": state,
+                },
+            )
+            data = response.json()
+            memos.extend(data["memos"])
+            if len(data["nextPageToken"]) == 0:
+                return memos
+
+    for memo in list_memos("NORMAL") + list_memos("ARCHIVED"):
+        response = client.get(f"/api/v1/{memo['name']}/shares")
+        data = response.json()
+        if len(data["memoShares"]) > 0:
+            print(f"{environ['MEMOS_URL']}/{memo['name']}")
+
+
+if __name__ == "__main__":
+    main()
