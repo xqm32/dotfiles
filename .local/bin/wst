@@ -1,0 +1,82 @@
+#!/usr/bin/env -S uv run --script
+
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "rich>=14.3.3",
+# ]
+# ///
+
+from json import dumps
+from os import environ
+from pathlib import Path
+from shutil import rmtree
+from subprocess import run
+from sys import argv
+
+from rich import print
+from rich.tree import Tree
+
+
+def main() -> None:
+    tree = Tree("Workspaces")
+
+    workspaces = Path.home() / "Workspaces"
+
+    for workspace in sorted(workspaces.glob("*")):
+        if not workspace.is_dir():
+            print(f"Removing {workspace}")
+            workspace.unlink()
+            continue
+
+        branch = Tree(workspace.name)
+        tree.add(branch)
+
+        paths = []
+
+        for path in sorted(workspace.glob("*")):
+            if path.name == f"{workspace.name}.code-workspace":
+                continue
+            elif not path.is_dir():
+                print(f"Removing {path}")
+                path.unlink()
+                continue
+            elif path.name == ".DS_Store":
+                print(f"Removing {path}")
+                rmtree(path)
+                continue
+
+            paths.append(path)
+
+            dot_git = path / ".git"
+            dot_git_config = dot_git / "config"
+            dot_git_head = dot_git / "HEAD"
+
+            if dot_git.is_dir() and dot_git_config.is_file() and dot_git_head.is_file():
+                head = dot_git_head.read_text().removeprefix("ref: refs/heads/").strip()
+                if "https://github.com" in dot_git_config.read_text():
+                    branch.add(f"[blue]{path.name}[/blue] [green]({head})[/green]")
+                else:
+                    branch.add(f"[red]{path.name}[/red] [green]({head})[/green]")
+            else:
+                branch.add(path.name)
+
+        folders = [{"path": str(path)} for path in paths]
+
+        code_workspace = workspace / f"{workspace.name}.code-workspace"
+        code_workspace.write_text(dumps({"folders": folders}))
+
+        run(["zoxide", "add", workspace, *paths], check=True)
+
+        env = environ.copy()
+        env.pop("VIRTUAL_ENV")
+        if len(argv) == 2 and argv[1] == workspace.name:
+            run(["code", code_workspace], env=env, check=True)
+        elif len(argv) == 2 and Path(argv[1]).resolve() == workspace:
+            run(["code", code_workspace], env=env, check=True)
+
+    print(tree)
+
+
+if __name__ == "__main__":
+    main()
