@@ -1,0 +1,32 @@
+#!/usr/bin/env -S uv run --script
+
+# /// script
+# requires-python = ">=3.14"
+# dependencies = [
+#     "msgpack>=1.1.2",
+#     "pendulum>=3.2.0",
+# ]
+# ///
+
+from base64 import b64decode
+from json import dumps
+from zlib import decompress
+
+from msgpack import unpackb
+from pendulum import from_timestamp
+
+
+def main() -> None:
+    s = input()
+    if len(s) % 4:
+        n = 4 - len(s) % 4
+        s = f"{s}{'=' * n}"
+    m = unpackb(decompress(b64decode(s)))
+    if "latest_update" in m:
+        t = int.from_bytes(m["latest_update"]) / 1000
+        m["latest_update"] = from_timestamp(t).diff_for_humans()
+    print(dumps(m))
+
+
+if __name__ == "__main__":
+    main()
