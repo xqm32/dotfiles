@@ -1,0 +1,28 @@
+[settings]
+[settings.python]
+compile = false
+
+[settings.ruby]
+compile = false
+
+[tools]
+bun = "latest"
+fd = "latest"
+go = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+golangci-lint = "latest"
+node = "latest"
+opencode = "latest"
+"pipx:httpie" = "latest"
+pnpm = "latest"
+python = "3.14.5"
+rg = "latest"
+ruby = "4.0.5"
+ruff = "latest"
+rust = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+ty = "latest"
+uv = "latest"
+yq = "latest"
+zig = "latest"
