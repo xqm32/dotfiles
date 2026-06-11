@@ -1,4 +1,6 @@
 [settings]
+minimum_release_age_excludes = ["opencode"]
+
 [settings.python]
 compile = false
 
