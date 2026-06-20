@@ -1,4 +1,7 @@
 {
+  "[shellscript]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
+  },
   "chat.viewSessions.enabled": false,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
