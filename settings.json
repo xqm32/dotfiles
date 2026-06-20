@@ -1,25 +1,19 @@
 {
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "chat.viewSessions.enabled": false,
-    "go.alternateTools": {
-        "customFormatter": "golangci-lint"
-    },
-    "go.formatFlags": [
-        "fmt",
-        "--stdin"
-    ],
-    "go.formatTool": "custom",
-    "go.lintFlags": [
-        "--path-mode=abs",
-        "--fast-only"
-    ],
-    "go.lintTool": "golangci-lint",
-    "gopls": {
-        "ui.semanticTokens": true
-    },
-    "rust-analyzer.check.command": "clippy",
-    "terminal.integrated.cursorStyle": "line",
-    "window.autoDetectColorScheme": true
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "chat.viewSessions.enabled": false,
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint"
+  },
+  "go.formatFlags": ["fmt", "--stdin"],
+  "go.formatTool": "custom",
+  "go.lintFlags": ["--path-mode=abs", "--fast-only"],
+  "go.lintTool": "golangci-lint",
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "rust-analyzer.check.command": "clippy",
+  "terminal.integrated.cursorStyle": "line",
+  "window.autoDetectColorScheme": true
 }
