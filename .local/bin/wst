@@ -23,6 +23,10 @@ def main() -> None:
 
     workspaces = Path.home() / "Workspaces"
 
+    if len(argv) == 2 and argv[1].startswith("https://github.com/"):
+        path = argv[1].removeprefix("https://github.com/")
+        run(["git", "clone", argv[1], workspaces / path], check=True)
+
     for workspace in sorted(workspaces.glob("*")):
         if not workspace.is_dir():
             print(f"Removing {workspace}")
