@@ -1,8 +1,8 @@
 {
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "chat.viewSessions.enabled": false,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
   "go.alternateTools": {
     "customFormatter": "golangci-lint"
   },
