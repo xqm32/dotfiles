@@ -1,4 +1,7 @@
 {
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
   "[shellscript]": {
     "editor.defaultFormatter": "mkhl.shfmt"
   },
