@@ -27,5 +27,6 @@
   "python.terminal.activateEnvironment": false,
   "rust-analyzer.check.command": "clippy",
   "terminal.integrated.cursorStyle": "line",
-  "window.autoDetectColorScheme": true
+  "window.autoDetectColorScheme": true,
+  "workbench.experimental.modernUI": true
 }
