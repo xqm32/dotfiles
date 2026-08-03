@@ -2,15 +2,15 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 setopt INC_APPEND_HISTORY
 
-if type brew &>/dev/null; then
-	FPATH=/opt/homebrew/share/zsh-completions:$FPATH
+if type mise &>/dev/null; then
+	FPATH=$HOME/Workspaces/github/zsh-completions/src:$FPATH
 
 	autoload -Uz compinit
 	compinit
 fi
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/Workspaces/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/Workspaces/github/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
