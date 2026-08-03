@@ -61,3 +61,7 @@ starship = "latest"
 zoxide = "latest"
 1password-cli = "latest"
 usage = "latest"
+
+[shell_alias]
+ll = "eza -l"
+tree = "eza -T"
