@@ -14,6 +14,3 @@ eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
-
-alias ll="eza -l"
-alias tree="eza -T"
