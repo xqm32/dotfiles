@@ -21,8 +21,25 @@ compile = false
 
 [dotfiles]
 "~/.config/mise/config.toml" = {}
-"~/.zshrc/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zshrc" }
-"~/.zprofile/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zprofile" }
+"~/.zshrc/activate" = { block = "source <(~/.local/bin/mise activate zsh)" }
+"~/.zshrc/zsh" = { block = """
+HISTSIZE=1000000
+SAVEHIST=1000000
+setopt INC_APPEND_HISTORY
+
+fpath=(~/Workspaces/github/zsh-completions/src ~/.local/share/zsh/site-functions $fpath)
+
+autoload -Uz compinit
+compinit
+
+source ~/Workspaces/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/Workspaces/github/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source <(starship init zsh)
+source <(zoxide init zsh)
+source <(fzf --zsh)
+""" }
+"~/.zprofile/activate" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
 "~/.local/bin" = { mode = "symlink-each" }
 "~/Library/Application Support/Code/User/settings.json" = {}
 
