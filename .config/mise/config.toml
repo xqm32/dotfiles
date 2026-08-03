@@ -62,6 +62,11 @@ zoxide = "latest"
 1password-cli = "latest"
 usage = "latest"
 
+[env]
+_.path = "~/.local/bin"
+GOPATH = "{{ env.HOME }}/.local/share/go"
+GOBIN = "{{ env.HOME }}/.local/bin"
+
 [shell_alias]
 ll = "eza -l"
 tree = "eza -T"
