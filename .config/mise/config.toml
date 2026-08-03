@@ -12,6 +12,9 @@ compile = false
 
 [bootstrap.repos]
 "~/Workspaces/xqm32/dotfiles" = { url = "https://github.com/xqm32/dotfiles" }
+"~/Workspaces/github/zsh-completions" = { url = "https://github.com/zsh-users/zsh-completions" }
+"~/Workspaces/github/zsh-syntax-highlighting" = { url = "https://github.com/zsh-users/zsh-syntax-highlighting" }
+"~/Workspaces/github/zsh-autosuggestions" = { url = "https://github.com/zsh-users/zsh-autosuggestions" }
 
 [dotfiles]
 "~/.config/mise/config.toml" = {}
