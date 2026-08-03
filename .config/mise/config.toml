@@ -24,6 +24,7 @@ compile = false
 "~/.zshrc/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zshrc" }
 "~/.zprofile/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zprofile" }
 "~/.local/bin" = { mode = "symlink-each" }
+"~/Library/Application Support/Code/User/settings.json" = {}
 
 [tools]
 aube = "latest"
