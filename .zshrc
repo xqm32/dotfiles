@@ -2,7 +2,7 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 setopt INC_APPEND_HISTORY
 
-FPATH=~/Workspaces/github/zsh-completions/src:~/.local/share/zsh/site-functions:$FPATH
+fpath=(~/Workspaces/github/zsh-completions/src ~/.local/share/zsh/site-functions $fpath)
 
 autoload -Uz compinit
 compinit
