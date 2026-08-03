@@ -20,6 +20,7 @@ compile = false
 "~/.config/mise/config.toml" = {}
 "~/.zshrc/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zshrc" }
 "~/.zprofile/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zprofile" }
+"~/.local/bin" = { mode = "symlink-each" }
 
 [tools]
 aube = "latest"
