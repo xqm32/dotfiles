@@ -1,9 +1,9 @@
-export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/Workspaces/xqm32/dotfiles/.local/bin:$PATH"
+export PATH="~/go/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
+export PATH="~/Workspaces/xqm32/dotfiles/.local/bin:$PATH"
 
-export GOPATH="$HOME/.local/share/go"
-export GOBIN="$HOME/.local/bin"
+export GOPATH="~/.local/share/go"
+export GOBIN="~/.local/bin"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(mise activate zsh --shims)"
