@@ -2,12 +2,10 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 setopt INC_APPEND_HISTORY
 
-if type mise &>/dev/null; then
-	FPATH=~/Workspaces/github/zsh-completions/src:$FPATH
+FPATH=~/Workspaces/github/zsh-completions/src:$FPATH
 
-	autoload -Uz compinit
-	compinit
-fi
+autoload -Uz compinit
+compinit
 
 source ~/Workspaces/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/Workspaces/github/zsh-autosuggestions/zsh-autosuggestions.zsh
