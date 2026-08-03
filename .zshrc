@@ -10,7 +10,7 @@ compinit
 source ~/Workspaces/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/Workspaces/github/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source <(mise activate zsh)
+source <(~/.local/bin/mise activate zsh)
 source <(starship init zsh)
 source <(zoxide init zsh)
 source <(fzf --zsh)
