@@ -1,11 +1,22 @@
 [settings]
 minimum_release_age_excludes = ["opencode"]
 
+[settings.dotfiles]
+root = "~/Workspaces/xqm32/dotfiles"
+
 [settings.python]
 compile = false
 
 [settings.ruby]
 compile = false
+
+[bootstrap.repos]
+"~/Workspaces/xqm32/dotfiles" = { url = "https://github.com/xqm32/dotfiles" }
+
+[dotfiles]
+"~/.config/mise/config.toml" = {}
+"~/.zshrc/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zshrc" }
+"~/.zprofile/source" = { block = "source ~/Workspaces/xqm32/dotfiles/.zprofile" }
 
 [tools]
 aube = "latest"
