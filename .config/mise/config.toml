@@ -13,6 +13,9 @@ compile = false
 [settings.ruby]
 compile = false
 
+[bootstrap.macos.dock]
+show_recents = false
+
 [bootstrap.repos]
 "~/Workspaces/xqm32/dotfiles" = { url = "https://github.com/xqm32/dotfiles" }
 "~/Workspaces/github/zsh-completions" = { url = "https://github.com/zsh-users/zsh-completions" }
