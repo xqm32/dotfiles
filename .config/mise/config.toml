@@ -33,7 +33,7 @@ source ~/Workspaces/github/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source <(starship init zsh)
 source <(zoxide init zsh)
-source <(atuin init zsh)
+source <(atuin init zsh --disable-up-arrow)
 """ }
 "~/.zprofile/activate" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
 "~/.local/bin" = { mode = "symlink-each" }
