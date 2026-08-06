@@ -23,10 +23,6 @@ compile = false
 "~/.config/mise/config.toml" = {}
 "~/.zshrc/activate" = { block = "source <(~/.local/bin/mise activate zsh)" }
 "~/.zshrc/zsh" = { block = """
-HISTSIZE=1000000
-SAVEHIST=1000000
-setopt INC_APPEND_HISTORY
-
 fpath=(~/Workspaces/github/zsh-completions/src ~/.local/share/zsh/site-functions $fpath)
 
 autoload -Uz compinit
@@ -37,7 +33,7 @@ source ~/Workspaces/github/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source <(starship init zsh)
 source <(zoxide init zsh)
-source <(fzf --zsh)
+source <(atuin init zsh)
 """ }
 "~/.zprofile/activate" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
 "~/.local/bin" = { mode = "symlink-each" }
@@ -45,6 +41,7 @@ source <(fzf --zsh)
 
 [tools]
 1password-cli = "latest"
+atuin = "latest"
 aube = "latest"
 bun = "latest"
 eza = "latest"
