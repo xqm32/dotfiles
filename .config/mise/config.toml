@@ -88,6 +88,7 @@ _.path = "~/.local/bin"
 GOPATH = "{{ env.HOME }}/.local/share/go"
 GOBIN = "{{ env.HOME }}/.local/bin"
 BUN_INSTALL_CACHE_DIR = "{{ env.HOME }}/.cache/bun"
+NPM_CONFIG_CACHE = "{{ env.HOME }}/.cache/npm"
 
 [shell_alias]
 ll = "eza -l"
