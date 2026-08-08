@@ -87,6 +87,7 @@ zoxide = "latest"
 _.path = "~/.local/bin"
 GOPATH = "{{ env.HOME }}/.local/share/go"
 GOBIN = "{{ env.HOME }}/.local/bin"
+BUN_INSTALL_CACHE_DIR = "{{ env.HOME }}/.cache/bun"
 
 [shell_alias]
 ll = "eza -l"
