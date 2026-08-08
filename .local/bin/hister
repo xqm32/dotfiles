@@ -1,0 +1,19 @@
+#!/usr/bin/env -S uv run --script
+
+# /// script
+# requires-python = ">=3.14"
+# dependencies = []
+# ///
+
+from pathlib import Path
+
+
+def main() -> None:
+    for path in Path.home().glob(".*_history"):
+        if path.is_file():
+            print(f"Removing {path}")
+            path.unlink()
+
+
+if __name__ == "__main__":
+    main()
