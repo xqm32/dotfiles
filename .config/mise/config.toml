@@ -13,6 +13,10 @@ compile = false
 [settings.ruby]
 compile = false
 
+[settings.rust]
+cargo_home = "~/.local/share/cargo"
+rustup_home = "~/.local/share/rustup"
+
 [bootstrap.macos.dock]
 show_recents = false
 
