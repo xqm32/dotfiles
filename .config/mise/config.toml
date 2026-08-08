@@ -5,7 +5,7 @@ minimum_release_age_excludes = ["opencode", "pi"]
 use_git_credentials = true
 
 [settings.dotfiles]
-root = "~/Workspaces/xqm32/dotfiles"
+root = "~/.local/share/dotfiles"
 
 [settings.python]
 compile = false
@@ -21,22 +21,22 @@ rustup_home = "~/.local/share/rustup"
 show_recents = false
 
 [bootstrap.repos]
-"~/Workspaces/xqm32/dotfiles" = { url = "https://github.com/xqm32/dotfiles" }
-"~/Workspaces/github/zsh-completions" = { url = "https://github.com/zsh-users/zsh-completions" }
-"~/Workspaces/github/zsh-syntax-highlighting" = { url = "https://github.com/zsh-users/zsh-syntax-highlighting" }
-"~/Workspaces/github/zsh-autosuggestions" = { url = "https://github.com/zsh-users/zsh-autosuggestions" }
+"~/.local/share/dotfiles" = { url = "https://github.com/xqm32/dotfiles" }
+"~/.local/share/zsh-completions" = { url = "https://github.com/zsh-users/zsh-completions" }
+"~/.local/share/zsh-syntax-highlighting" = { url = "https://github.com/zsh-users/zsh-syntax-highlighting" }
+"~/.local/share/zsh-autosuggestions" = { url = "https://github.com/zsh-users/zsh-autosuggestions" }
 
 [dotfiles]
 "~/.config/mise/config.toml" = {}
 "~/.zshrc/activate" = { block = "source <(~/.local/bin/mise activate zsh)" }
 "~/.zshrc/zsh" = { block = """
-fpath=(~/Workspaces/github/zsh-completions/src ~/.local/share/zsh/site-functions $fpath)
+fpath=(~/.local/share/zsh-completions/src ~/.local/share/zsh/site-functions $fpath)
 
 autoload -Uz compinit
 compinit
 
-source ~/Workspaces/github/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/Workspaces/github/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source <(starship init zsh)
 source <(zoxide init zsh)
