@@ -45,6 +45,7 @@ source <(atuin init zsh --disable-up-arrow)
 "~/.zprofile/activate" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
 "~/.local/bin" = { mode = "symlink-each" }
 "~/Library/Application Support/Code/User/settings.json" = {}
+"~/.config/atuin/config.toml" = {}
 
 [tools]
 1password-cli = "latest"
