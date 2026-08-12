@@ -1,0 +1,18 @@
+[settings]
+minimum_release_age_excludes = ["opencode", "pi"]
+
+[settings.github]
+use_git_credentials = true
+
+[settings.dotfiles]
+root = "~/.local/share/dotfiles"
+
+[settings.python]
+compile = false
+
+[settings.ruby]
+compile = false
+
+[settings.rust]
+cargo_home = "~/.local/share/cargo"
+rustup_home = "~/.local/share/rustup"

@@ -1,0 +1,3 @@
+[shell_alias]
+ll = "eza -l"
+tree = "eza -T"
