@@ -1,4 +1,5 @@
 [dotfiles]
+"~/.config/mise/config.toml/mise" = { block = "" }
 "~/.config/mise/conf.d" = { mode = "symlink-each" }
 "~/.zshrc/activate" = { block = "source <(~/.local/bin/mise activate zsh)" }
 "~/.zshrc/zsh" = { block = """
