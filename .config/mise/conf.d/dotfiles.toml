@@ -11,11 +11,11 @@ fpath=(~/.local/share/zsh-completions/src ~/.local/share/zsh/site-functions $fpa
 autoload -Uz compinit
 compinit
 
-source ~/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+source <(atuin init zsh --disable-up-arrow)
 source <(starship init zsh)
 source <(zoxide init zsh)
-source <(atuin init zsh --disable-up-arrow)
 """ }
 "~/Library/Application Support/Code/User/settings.json" = {}
