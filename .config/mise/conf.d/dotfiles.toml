@@ -3,9 +3,10 @@
 "~/.config/mise/conf.d" = { mode = "symlink-each" }
 "~/.config/mise/config.toml/mise" = { block = "" }
 "~/.config/atuin/config.toml" = {}
-"~/.zprofile/activate" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
-"~/.zshrc/activate" = { block = "source <(~/.local/bin/mise activate zsh)" }
+"~/.zprofile/zsh" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
 "~/.zshrc/zsh" = { block = """
+source <(~/.local/bin/mise activate zsh)
+
 fpath=(~/.local/share/zsh-completions/src ~/.local/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
