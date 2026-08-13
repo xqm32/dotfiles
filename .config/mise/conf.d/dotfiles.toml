@@ -1,6 +1,9 @@
 [dotfiles]
-"~/.config/mise/config.toml/mise" = { block = "" }
+"~/.local/bin" = { mode = "symlink-each" }
 "~/.config/mise/conf.d" = { mode = "symlink-each" }
+"~/.config/mise/config.toml/mise" = { block = "" }
+"~/.config/atuin/config.toml" = {}
+"~/.zprofile/activate" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
 "~/.zshrc/activate" = { block = "source <(~/.local/bin/mise activate zsh)" }
 "~/.zshrc/zsh" = { block = """
 fpath=(~/.local/share/zsh-completions/src ~/.local/share/zsh/site-functions $fpath)
@@ -15,7 +18,4 @@ source <(starship init zsh)
 source <(zoxide init zsh)
 source <(atuin init zsh --disable-up-arrow)
 """ }
-"~/.zprofile/activate" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
-"~/.local/bin" = { mode = "symlink-each" }
 "~/Library/Application Support/Code/User/settings.json" = {}
-"~/.config/atuin/config.toml" = {}
