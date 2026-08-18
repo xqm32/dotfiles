@@ -1,7 +1,6 @@
 [dotfiles]
 "~/.local/bin" = { mode = "symlink-each" }
 "~/.config/mise/conf.d" = { mode = "symlink-each" }
-"~/.config/mise/config.toml/mise" = { block = "" }
 "~/.config/atuin/config.toml" = {}
 "~/.zprofile/zsh" = { block = "source <(~/.local/bin/mise activate zsh --shims)" }
 "~/.zshrc/zsh" = { block = """
