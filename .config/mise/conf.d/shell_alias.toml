@@ -1,3 +1,4 @@
 [shell_alias]
 ll = "eza -l"
+pf = "pitchfork"
 tree = "eza -T"
