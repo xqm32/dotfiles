@@ -2,6 +2,11 @@
 "~/.local/bin" = { mode = "symlink-each" }
 "~/.config/mise/conf.d" = { mode = "symlink-each" }
 "~/.config/atuin/config.toml" = {}
+"~/.config/npm/npmrc/npm" = { block = """
+cache=${XDG_CACHE_HOME}/npm
+init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
+logs-dir=${XDG_STATE_HOME}/npm/logs
+""" }
 "~/.zprofile/zsh" = { block = """
 export XDG_CACHE_HOME=~/.cache
 export XDG_CONFIG_HOME=~/.config
