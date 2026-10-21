@@ -12,6 +12,7 @@ go = "latest"
 golangci-lint = "latest"
 helix = "latest"
 node = "latest"
+opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
 oxfmt = "latest"
 oxlint = "latest"
 pi = "latest"
