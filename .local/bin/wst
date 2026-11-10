@@ -39,7 +39,7 @@ def main() -> None:
         paths = []
 
         for path in sorted(workspace.glob("*")):
-            if path.name == f"{workspace.name}.code-workspace":
+            if path.name in (f"{workspace.name}.code-workspace", "AGENTS.md"):
                 continue
             elif not path.is_dir():
                 print(f"Removing {path}")
