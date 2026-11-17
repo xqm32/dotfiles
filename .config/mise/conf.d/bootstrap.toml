@@ -1,4 +1,4 @@
-[bootstrap.macos.dock]
+[bootstrap.settings.macos.dock]
 show_recents = false
 
 [bootstrap.repos]
